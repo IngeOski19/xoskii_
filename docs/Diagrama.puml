@@ -1,2 +1,53 @@
-class kuri 
- class monkijair
+
+ IceClimbers
+
+class Personaje
+class Martillo
+class Escenario
+class Plataformas 
+class Ladrillos
+class Nubes
+class Enemigos
+class Yetis
+class Aves
+class Hielos
+class Osos 
+
+class Verdura
+class Elote
+class Cebolla
+class Calabaza
+class Papa
+class Champiñon
+class Zanahoria
+class Pepino
+class Col
+class Lechuga
+
+
+    Escenario*--Personaje
+        Personaje o--Martillo
+
+    Escenario*--Enemigos
+        Yetis -|> Enemigos
+        Aves -|> Enemigos
+        Hielos -|> Enemigos
+        Osos -|> Enemigos
+
+    Escenario*--Plataformas
+        Plataformas*-- Ladrillos
+        Plataformas*--Nubes
+    Escenario*--Verdura
+       
+        Elote-|> Verdura 
+        Cebolla -|> Verdura
+        Calabaza -|> Verdura
+        Papa -|> Verdura
+        Champiñon -|> Verdura
+        Zanahoria -|> Verdura
+        Pepino -|> Verdura
+        Col -|> Verdura
+        Lechuga -|> Verdura
+
+
+
