@@ -1,53 +1,58 @@
+@startuml Si
 
- IceClimbers
-
-class Personaje
-class Martillo
-class Escenario
-class Plataformas 
-class Ladrillos
-class Nubes
+class IceClimbers
+class Personajes
 class Enemigos
-class Yetis
-class Aves
-class Hielos
-class Osos 
-
-class Verdura
-class Elote
-class Cebolla
-class Calabaza
-class Papa
-class Champiñon
+class Escalador
+class Yeti
+class Foca 
+class Pajaro
+class Terodactilo
+class Nube
+class Oso
+class Berenjena
 class Zanahoria
-class Pepino
-class Col
-class Lechuga
+class Verduras
+class Plataformas
+class Ladrillo
+class Estalactita
+class Martillo
+class Hielo 
+class Escenario
+class Objetos
 
+IceClimbers --* Personajes
+IceClimbers --* Escenario
+IceClimbers --* Enemigos
+IceClimbers --* Objetos
 
-    Escenario*--Personaje
-        Personaje o--Martillo
+Personajes --|> Escalador
 
-    Escenario*--Enemigos
-        Yetis -|> Enemigos
-        Aves -|> Enemigos
-        Hielos -|> Enemigos
-        Osos -|> Enemigos
+Escalador --o Martillo
+Escalador --o Berenjena
+Escalador --o Zanahoria
 
-    Escenario*--Plataformas
-        Plataformas*-- Ladrillos
-        Plataformas*--Nubes
-    Escenario*--Verdura
-       
-        Elote-|> Verdura 
-        Cebolla -|> Verdura
-        Calabaza -|> Verdura
-        Papa -|> Verdura
-        Champiñon -|> Verdura
-        Zanahoria -|> Verdura
-        Pepino -|> Verdura
-        Col -|> Verdura
-        Lechuga -|> Verdura
+Escenario --|> Plataformas
 
+Objetos --|> Martillo
+Objetos --|> Verduras
+Objetos --|> Hielo
 
+Plataformas --|> Nube
+Plataformas --|> Estalactita
+Plataformas --|> Ladrillo
+
+Verduras --|> Berenjena 
+Verduras --|> Zanahoria
+
+Enemigos --|> Yeti
+Enemigos --|> Oso
+Enemigos --|> Foca
+Enemigos --|> Pajaro
+Enemigos --|> Terodactilo
+
+Yeti --o Hielo
+Foca --o Hielo
+
+@enduml
 
