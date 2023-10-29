@@ -4,7 +4,7 @@ class IceClimbers
 class Actualizable 
 class Ventana 
 class Dibujo
-class Personajes
+class Personaje
 class Enemigos
 class Escalador
 class Yeti
@@ -24,7 +24,7 @@ class Hielo
 class Escenario
 class Objetos
 
-IceClimbers --* Personajes
+IceClimbers --* Personaje
 IceClimbers --* Escenario
 IceClimbers --* Enemigos
 IceClimbers --* Objetos
@@ -32,7 +32,7 @@ IceClimbers o-- Actualizable
 IceClimbers o-- Ventana
 IceClimbers o-- Dibujo
 
-Personajes --|> Escalador
+Personaje --|> Escalador
 
 Escalador --o Martillo
 Escalador --o Berenjena
