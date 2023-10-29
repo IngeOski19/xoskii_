@@ -1,10 +1,5 @@
-br : clean compilar ejecutar
+bin/ice: src/ice.cpp include/*
+	c++ src/ice.cpp -o bin/ice -lcurses -I include
 
-compilar : src/main.cpp
-g++ src/main.cpp -o bin/mascota -I include
-
-ejecutar : bin/mascota
-./bin/mascota
-
-clean : bin/mascota
-rm bin/mascota
+run: bin/ice
+	./bin/ice
