@@ -15,8 +15,8 @@ int main(int argc, char const *argv[])
 {
     Ventana ventana;
     Personaje* personaje1 = new Personaje(0,0);
-    Enemigo* enemigo1 = new Enemigo(80,0);
-    Enemigosec* enemigo2 = new Enemigosec(60,70);
+    Enemigo* enemigo1 = new Enemigo(70,0);
+    Enemigosec* enemigo2 = new Enemigosec(50,0);
 
     Martillo* martillo = new Martillo();
     Bala* bala = new Bala(0,1);

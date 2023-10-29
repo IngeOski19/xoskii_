@@ -1,6 +1,9 @@
 @startuml Si
 
 class IceClimbers
+class Actualizable 
+class Ventana 
+class Dibujo
 class Personajes
 class Enemigos
 class Escalador
@@ -25,6 +28,9 @@ IceClimbers --* Personajes
 IceClimbers --* Escenario
 IceClimbers --* Enemigos
 IceClimbers --* Objetos
+IceClimbers o-- Actualizable
+IceClimbers o-- Ventana
+IceClimbers o-- Dibujo
 
 Personajes --|> Escalador
 
